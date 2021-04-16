@@ -1,0 +1,29 @@
+<nav class="navbar navbar-dark bg-dark">
+  <button  routerLink="/login" class="btn btn-info new" (click)="logout()">Logout</button>
+</nav>
+<div class="my-task-table">
+  <div>
+    <button  routerLink="/newtask" class="btn btn-info new">+</button>
+  </div>  
+  <table class="table table-dark">
+    <thead>
+      <tr>       
+        <th scope="col">Description</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let task of taskApi.tasks">
+        <td>{{task.description}}</td>
+        <td>{{task.from}}</td>
+        <td>{{task.to}}</td>
+        <td>{{task.status}}</td>
+        <td><button  routerLink="/edittask/{{task.id}}" class="btn btn-info new">Edit</button></td>
+        <td><button  class="btn btn-info new" (click)="deleteTask(task.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

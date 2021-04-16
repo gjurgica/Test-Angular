@@ -1,0 +1,27 @@
+<form [formGroup]= "editForm" (ngSubmit)="editTask()" class="form-task">
+    <div>
+        <label for="description" class="custom-label">Description:</label>
+        <textarea class="form-control" rows="2" formControlName="description" ></textarea>
+    </div>
+    <div class="custom-calendar">
+        <label for="from"class="custom-label" >From:</label>
+        <input type="date" id="from" formControlName="from"
+        [ngModel]="task.from | date:'yyyy-MM-dd'">
+        <label for="to" class="custom-label">To:</label>
+        <input type="date" id="to" formControlName="to"
+        [ngModel]="task.to | date:'yyyy-MM-dd'">
+    </div>
+    <div>
+        <label for="status" class="custom-label">Status:</label>
+        <select name="status" formControlName="status">
+            <option value="work in progress">Work in progress</option>
+            <option value="deleted">Deleted</option>
+            <option value="done">Done</option>
+            <option value="todo">Todo</option>
+        </select>
+    </div>
+    <div class="create-btn-div">
+        <button class="btn btn-lg btn-primary btn-block create-btn" type="submit">Create</button>
+    </div>
+</form>
+

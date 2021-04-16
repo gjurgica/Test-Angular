@@ -1,0 +1,48 @@
+<form [formGroup]= "newTaskForm" (ngSubmit)="addTask()" class="form-task">
+    <div>
+        <label for="description" class="custom-label">Description:</label>
+        <textarea class="form-control" rows="2" formControlName="description" ></textarea>
+        <div *ngIf="isValidInput('description')"
+        class="alert alert-danger">
+        <div *ngIf="newTaskForm.controls['description'].errors.required">
+          Description is required.
+        </div>
+      </div>
+    </div>
+    <div class="custom-calendar">
+        <label for="from"class="custom-label" >From:</label>
+        <input type="date" id="from" formControlName="from">
+        <div *ngIf="isValidInput('from')"
+        class="alert alert-danger">
+        <div *ngIf="newTaskForm.controls['from'].errors.required">
+          Field is required.
+        </div>
+      </div>
+        <label for="to" class="custom-label">To:</label>
+        <input type="date" id="to" formControlName="to">
+        <div *ngIf="isValidInput('to')"
+        class="alert alert-danger">
+        <div *ngIf="newTaskForm.controls['to'].errors.required">
+          Field is required.
+        </div>
+      </div>
+    </div>
+    <div>
+        <label for="status" class="custom-label">Status:</label>
+        <select name="status" formControlName="status">
+            <option value="work in progress">Work in progress</option>
+            <option value="deleted">Deleted</option>
+            <option value="done">Done</option>
+            <option value="todo">Todo</option>
+        </select>
+        <div *ngIf="isValidInput('status')"
+        class="alert alert-danger">
+        <div *ngIf="newTaskForm.controls['status'].errors.required">
+          Status is required.
+        </div>
+      </div>
+    </div>
+    <div class="create-btn-div">
+        <button class="btn btn-lg btn-primary btn-block create-btn" type="submit">Create</button>
+    </div>
+</form>

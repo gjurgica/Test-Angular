@@ -1,0 +1,20 @@
+[
+        {
+            "id":1,
+            "email":"admin@gmail.com",
+            "password":"admin",
+            "created":"2021-15-03"
+        },
+        {
+            "id":2,
+            "email":"test1@gmail.com",
+            "password":"test1",
+            "created":"2021-15-03"
+        },
+        {
+            "id":3,
+            "email":"test2@gmail.com",
+            "password":"test2",
+            "created":"2021-15-03"
+        }
+]

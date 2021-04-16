@@ -1,0 +1,52 @@
+[
+    {
+        "id":1,
+        "description":"Practice",
+        "from":"2021-15-03",
+        "to":"2021-15-03",
+        "status":"done",
+        "created":"2021-15-03",
+        "modified":"",
+        "userId":3
+    },
+    {
+        "id":2,
+        "description":"Shopping",
+        "from":"2021-12-03",
+        "to":"2021-15-03",
+        "status":"todo",
+        "created":"2021-12-03",
+        "modified":"",
+        "userId":3
+    },
+    {
+        "id":3,
+        "description":"Visiting Lora",
+        "from":"2021-10-02",
+        "to":"2021-15-02",
+        "status":"todo",
+        "created":"2021-10-02",
+        "modified":"",
+        "userId":1
+    },
+    {
+        "id":4,
+        "description":"Walking Dog",
+        "from":"2021-15-03",
+        "to":"2021-15-03",
+        "status":"done",
+        "created":"2021-15-03",
+        "modified":"",
+        "userId":1
+    },
+    {
+        "id":5,
+        "description":"Make cookies",
+        "from":"2021-15-03",
+        "to":"2021-12-03",
+        "status":"todo",
+        "created":"2021-15-03",
+        "modified":"",
+        "userId":1
+    }
+    ]
